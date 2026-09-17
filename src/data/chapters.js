@@ -1,3 +1,336 @@
+// // Sixteen chapters, three acts: pre-colonial Eko -> the 1852/1861 treaties -> legacy.
+// // Each has a point on the camera curve, a fog/light mood, placeholder markers
+// // (stand-ins for real Meshy-generated glTF characters/props), and caption beats.
+
+// export const CHAPTERS = [
+//   // ---------------- ACT I: EKO BEFORE THE TREATIES ----------------
+//   {
+//     id: 0,
+//     roman: 'I',
+//     title: 'The Awori and the Lagoon',
+//     date: 'Lagos Island · before the 15th century',
+//     center: [0, 2, 36],
+//     fog: '#4a6a5a',
+//     light: '#dff0e0',
+//     intensity: 1.1,
+//     markers: [
+//       { type: 'hut', pos: [-4, 0, 35], color: '#4a3c28' },
+//       { type: 'hut', pos: [4, 0, 38], color: '#4a3c28' },
+//       { type: 'figure', pos: [0, 0, 33], color: '#3f5c46', label: 'Olofin', model: 'characters/olofin.glb' },
+//     ],
+//     captions: [
+//       "Long before any treaty, Olofin's people settle a chain of islands in a wide lagoon.",
+//       "The Awori call it home — fishing, salt-making, and trade along the water.",
+//       "Olofin's sons found the Idejo, Lagos's oldest chieftaincy — the land itself remembers them.",
+//     ],
+//   },
+//   {
+//     id: 1,
+//     roman: 'II',
+//     title: "Benin's Reach",
+//     date: '15th–16th century',
+//     center: [5, 2.1, 26],
+//     fog: '#5a3a2e',
+//     light: '#e0a15a',
+//     intensity: 0.95,
+//     markers: [
+//       { type: 'ship', pos: [2, 0, 25], color: '#3a2a1c', scale: 0.7 },
+//       { type: 'ship', pos: [8, 0, 28], color: '#3a2a1c', scale: 0.7 },
+//       { type: 'figure', pos: [5, 0, 23], color: '#8a5a34', label: 'Ashipa', model: 'characters/ashipa.glb' },
+//     ],
+//     captions: [
+//       "By the 15th century, the powerful Benin Empire's influence reaches the lagoon.",
+//       "Oba Orhogbua of Benin makes the island a war-camp — Eko.",
+//       "He installs a ruler named Ashipa. Lagos tradition and Benin tradition tell this moment differently — both are still argued today.",
+//     ],
+//   },
+//   {
+//     id: 2,
+//     roman: 'III',
+//     title: 'The House of Olofin and the White Caps',
+//     date: '17th century · Iga Idunganran built 1670',
+//     center: [-4, 2.3, 16],
+//     fog: '#141b2b',
+//     light: '#f3b34a',
+//     intensity: 0.6,
+//     markers: [
+//       { type: 'palace', pos: [-4, 0, 14], scale: 1.3, color: '#241a12' },
+//       { type: 'figure', pos: [-1, 0, 12], color: '#c98f3a', label: 'Eletu Odibo' },
+//       { type: 'figure', pos: [-7, 0, 13], color: '#e6ddc4', label: 'Idejo Chief' },
+//     ],
+//     captions: [
+//       "Ashipa's line becomes the Obas of Lagos. Around them, four classes of White Cap Chiefs take shape.",
+//       "Idejo landowners, Akarigbere kingmakers, Ogalade priests, Abagbon warriors — each with its own place at court.",
+//       "In 1670, a palace rises on Chief Aromire's old pepper farm: Iga Idunganran, home to the Oba of Lagos ever since.",
+//     ],
+//   },
+//   {
+//     id: 3,
+//     roman: 'IV',
+//     title: 'A Kingdom at the Crossroads',
+//     date: '18th century',
+//     center: [3, 2.2, 6],
+//     fog: '#5a3a2e',
+//     light: '#e2b477',
+//     intensity: 0.9,
+//     markers: [
+//       { type: 'hut', pos: [6, 0, 5], color: '#4a3c28' },
+//       { type: 'figure', pos: [3, 0, 4], color: '#8a6a34', label: 'Trader' },
+//       { type: 'ship', pos: [0, 0, 3], color: '#3a2a1c', scale: 0.8 },
+//     ],
+//     captions: [
+//       "For generations Eko trades in salt, pepper, and fish along the coast.",
+//       "Through the 18th century, a darker trade grows alongside it — enslaved people, sold into ships bound across the Atlantic.",
+//       "By the time this story's treaties begin, that trade has made Lagos rich — and made it Britain's target.",
+//     ],
+//   },
+
+//   // ---------------- ACT II: THE TREATIES ----------------
+//   {
+//     id: 4,
+//     roman: 'V',
+//     title: 'A Consul Appointed',
+//     date: 'West African coast · 1849',
+//     center: [0, 2, 0],
+//     fog: '#33465a',
+//     light: '#cfe0e8',
+//     intensity: 1.0,
+//     markers: [
+//       { type: 'palace', pos: [-5, 0, 2], scale: 0.8, color: '#5a4a34' },
+//       { type: 'figure', pos: [3, 0, -1], color: '#3f5c46', label: 'Beecroft' },
+//     ],
+//     captions: [
+//       "Britain has spent decades hunting slave ships along this coast.",
+//       "A new Consul arrives for the Bights of Benin and Biafra — John Beecroft.",
+//       "His task: close the slave trade wherever it still runs. Lagos runs it still.",
+//     ],
+//   },
+//   {
+//     id: 5,
+//     roman: 'VI',
+//     title: 'Lagos Under Kosoko',
+//     date: 'Lagos Island · c. 1850',
+//     center: [6, 2.2, -12],
+//     fog: '#141b2b',
+//     light: '#f3b34a',
+//     intensity: 0.6,
+//     markers: [
+//       { type: 'palace', pos: [6, 0, -14], scale: 1.4, color: '#241a12' },
+//       { type: 'figure', pos: [9, 0, -10], color: '#c98f3a', label: 'Kosoko', model: 'characters/kosoko.glb' },
+//       { type: 'figure', pos: [3, 0, -9], color: '#b7452f', label: 'Oshodi Tapa' },
+//     ],
+//     captions: [
+//       "At the lagoon's mouth, Oba Kosoko rules a port built on the slave trade.",
+//       "His war captain, Oshodi Tapa, commands one of the coast's most feared forces.",
+//       "Kosoko has turned away British pressure before. He intends to again.",
+//     ],
+//   },
+//   {
+//     id: 6,
+//     roman: 'VII',
+//     title: "An Exile's Bargain",
+//     date: 'Badagry · 1850–51',
+//     center: [-5, 2, -24],
+//     fog: '#5a3a2e',
+//     light: '#e0a15a',
+//     intensity: 0.9,
+//     markers: [
+//       { type: 'hut', pos: [-8, 0, -25], color: '#3a2c22' },
+//       { type: 'hut', pos: [-2, 0, -27], color: '#3a2c22' },
+//       { type: 'figure', pos: [-5, 0, -22], color: '#2f4d5e', label: 'Akitoye' },
+//     ],
+//     captions: [
+//       "In Badagry, the uncle Kosoko once deposed watches and waits.",
+//       "Oba Akitoye offers Britain a bargain: restore me, and I will end the trade.",
+//       "Missionaries and freed captives carry his case all the way to London.",
+//     ],
+//   },
+//   {
+//     id: 7,
+//     roman: 'VIII',
+//     title: 'The Reduction of Lagos',
+//     date: '26–28 December 1851',
+//     center: [4, 3, -38],
+//     fog: '#2a1414',
+//     light: '#f3c15f',
+//     intensity: 0.5,
+//     markers: [
+//       { type: 'ship', pos: [1, 0, -36], color: '#0d0a08' },
+//       { type: 'ship', pos: [7, 0, -41], color: '#0d0a08' },
+//       { type: 'palace', pos: [4, 0, -44], scale: 1.1, color: '#140d09' },
+//     ],
+//     captions: [
+//       "Commodore Henry Bruce's ships enter the lagoon.",
+//       "Two days of fighting Lagosians remember as Ogun Agidingbi — the war of boiling cannons.",
+//       "Oshodi Tapa's defence is fierce. It is not enough.",
+//     ],
+//   },
+//   {
+//     id: 8,
+//     roman: 'IX',
+//     title: 'A King Falls, A King Returns',
+//     date: 'Late December 1851',
+//     center: [-4, 2.2, -50],
+//     fog: '#3a2e3f',
+//     light: '#e2b477',
+//     intensity: 0.9,
+//     markers: [
+//       { type: 'figure', pos: [-8, 0, -49], color: '#c98f3a', label: 'Kosoko (fleeing)', model: 'characters/kosoko.glb' },
+//       { type: 'figure', pos: [0, 0, -51], color: '#2f4d5e', label: 'Akitoye (returning)' },
+//     ],
+//     captions: [
+//       "Kosoko escapes to Epe. He will keep contesting Lagos for years to come.",
+//       "Akitoye returns to the throne he lost six years before — this time with British ships behind him.",
+//     ],
+//   },
+//   {
+//     id: 9,
+//     roman: 'X',
+//     title: 'The Treaty on the Penelope',
+//     date: '1 January 1852',
+//     center: [0, 2.5, -62],
+//     fog: '#233246',
+//     light: '#f1ead6',
+//     intensity: 1.1,
+//     markers: [
+//       { type: 'ship', pos: [0, 0, -63], color: '#3b2a1c', scale: 1.6 },
+//       { type: 'figure', pos: [-3, 1.1, -61], color: '#0d2438', label: 'Bruce' },
+//       { type: 'figure', pos: [0, 1.1, -61], color: '#3f5c46', label: 'Beecroft' },
+//       { type: 'figure', pos: [3, 1.1, -61], color: '#2f4d5e', label: 'Akitoye' },
+//       { type: 'flag', pos: [4, 0, -64], color: '#1c2f5e' },
+//     ],
+//     captions: [
+//       "Aboard HMS Penelope, nine articles are read aloud.",
+//       "The slave trade abolished. Human sacrifice banned. British trade and missionaries protected.",
+//       "Bruce, Beecroft, and Akitoye set their hands and seals. Lagos enters its Consular period.",
+//     ],
+//   },
+//   {
+//     id: 10,
+//     roman: 'XI',
+//     title: 'An Uneasy Decade',
+//     date: '1852–1861',
+//     center: [5, 2.4, -72],
+//     fog: '#241a12',
+//     light: '#f3b34a',
+//     intensity: 0.8,
+//     markers: [
+//       { type: 'palace', pos: [5, 0, -74], scale: 1.2, color: '#2c2015' },
+//       { type: 'flag', pos: [8, 0, -74], color: '#1c2f5e' },
+//       { type: 'figure', pos: [2, 0, -71], color: '#4a3b63', label: 'Dosunmu' },
+//     ],
+//     captions: [
+//       "Enforcement is patchy — slaving persists in the shadows of the treaty.",
+//       "In 1853 Akitoye dies. His son Dosunmu inherits an uneasy throne.",
+//       "A resident British Consul now shapes Lagos's trade, justice, and politics from behind the scenes.",
+//     ],
+//   },
+//   {
+//     id: 11,
+//     roman: 'XII',
+//     title: 'Pressure Mounts',
+//     date: 'July 1861',
+//     center: [-5, 2.6, -82],
+//     fog: '#2e2436',
+//     light: '#8a6a5a',
+//     intensity: 0.75,
+//     markers: [
+//       { type: 'ship', pos: [-5, 0, -84], scale: 1.3, color: '#141018' },
+//       { type: 'figure', pos: [-8, 1.1, -82], color: '#33302a', label: 'McCoskry' },
+//       { type: 'figure', pos: [-5, 1.1, -82], color: '#0d2438', label: 'Bedingfield' },
+//       { type: 'figure', pos: [-2, 1.1, -82], color: '#4a3b63', label: 'Dosunmu' },
+//     ],
+//     captions: [
+//       "Kosoko's faction still threatens; French traders circle the coast at Whydah.",
+//       "London decides consular influence is no longer enough.",
+//       "Aboard HMS Prometheus, McCoskry and Bedingfield present Dosunmu an ultimatum.",
+//     ],
+//   },
+//   {
+//     id: 12,
+//     roman: 'XIII',
+//     title: 'The Cession',
+//     date: '6 August 1861',
+//     center: [0, 2.5, -92],
+//     fog: '#1c1420',
+//     light: '#c98f3a',
+//     intensity: 0.85,
+//     markers: [
+//       { type: 'ship', pos: [0, 0, -93], scale: 1.5, color: '#2c2015' },
+//       { type: 'figure', pos: [-3, 1.1, -91], color: '#0d2438', label: 'Bedingfield' },
+//       { type: 'figure', pos: [0, 1.1, -91], color: '#4a3b63', label: 'Dosunmu' },
+//       { type: 'figure', pos: [3, 1.1, -91], color: '#33302a', label: 'McCoskry' },
+//       { type: 'flag', pos: [5, 0, -94], color: '#1c2f5e' },
+//     ],
+//     captions: [
+//       "Dosunmu resists for eleven days. Bedingfield's warning is explicit: sign, or Lagos burns.",
+//       "He cedes the port, island, and territories of Lagos to the British Crown.",
+//       "He keeps his title and a modest pension. He no longer keeps his kingdom.",
+//     ],
+//   },
+//   {
+//     id: 13,
+//     roman: 'XIV',
+//     title: 'Crown Colony',
+//     date: '5 March 1862',
+//     center: [0, 4, -104],
+//     fog: '#3a2438',
+//     light: '#e0955a',
+//     intensity: 1.0,
+//     markers: [
+//       { type: 'palace', pos: [0, 0, -106], scale: 1.6, color: '#1c130d' },
+//       { type: 'flag', pos: [3, 0, -104], scale: 1.4, color: '#1c2f5e' },
+//     ],
+//     captions: [
+//       "Lagos is proclaimed a British Crown Colony — Britain's first permanent foothold on this coast.",
+//       "One treaty about slavery, signed a decade earlier aboard the Penelope, had opened the door Britain now walked fully through.",
+//     ],
+//   },
+
+//   // ---------------- ACT III: WHAT REMAINED ----------------
+//   {
+//     id: 14,
+//     roman: 'XV',
+//     title: 'Isale Eko After 1862',
+//     date: 'Lagos · 1960 to today',
+//     center: [4, 3, -116],
+//     fog: '#324a52',
+//     light: '#e6f0ec',
+//     intensity: 1.05,
+//     markers: [
+//       { type: 'palace', pos: [4, 0, -118], scale: 1.3, color: '#241a12' },
+//       { type: 'flag', pos: [8, 0, -117], variant: 'nigeria' },
+//       { type: 'figure', pos: [1, 0, -115], color: '#e6ddc4', label: 'White Cap Chief (today)' },
+//     ],
+//     captions: [
+//       "Colonial rule ends in 1960. The Obaship and the White Cap Chiefs do not end with it.",
+//       "Idejo, Akarigbere, Ogalade, and Abagbon chiefs are still installed today, under the Oba of Lagos at Iga Idunganran.",
+//       "The institution the 1852 treaty tried to reshape is, in its own form, still standing.",
+//     ],
+//   },
+//   {
+//     id: 15,
+//     roman: 'XVI',
+//     title: 'Why This History Matters',
+//     date: 'Epilogue',
+//     center: [0, 5, -128],
+//     fog: '#3a2438',
+//     light: '#e0955a',
+//     intensity: 1.0,
+//     markers: [
+//       { type: 'flag', pos: [3, 0, -128], variant: 'nigeria', scale: 1.2 },
+//     ],
+//     captions: [
+//       "Two treaties, a bombardment, and a cession did not erase Lagos's own institutions — they were forced to share power with them, then survive them.",
+//       "Understanding 1852 and 1861 means understanding what came before: a kingdom with its own government, trade, and identity, centuries older than any British ship in its lagoon.",
+//     ],
+//   },
+// ];
+
+// export const TOTAL_LENGTH_VH = CHAPTERS.length * 100; // scroll track length
+// export const TOTAL_ROMAN = CHAPTERS[CHAPTERS.length - 1].roman; // e.g. "XVI"
+
+
 // Sixteen chapters, three acts: pre-colonial Eko -> the 1852/1861 treaties -> legacy.
 // Each has a point on the camera curve, a fog/light mood, placeholder markers
 // (stand-ins for real Meshy-generated glTF characters/props), and caption beats.
@@ -6,6 +339,7 @@ export const CHAPTERS = [
   // ---------------- ACT I: EKO BEFORE THE TREATIES ----------------
   {
     id: 0,
+    environment: 'water',
     roman: 'I',
     title: 'The Awori and the Lagoon',
     date: 'Lagos Island · before the 15th century',
@@ -26,6 +360,7 @@ export const CHAPTERS = [
   },
   {
     id: 1,
+    environment: 'water',
     roman: 'II',
     title: "Benin's Reach",
     date: '15th–16th century',
@@ -46,6 +381,7 @@ export const CHAPTERS = [
   },
   {
     id: 2,
+    environment: 'courtyard',
     roman: 'III',
     title: 'The House of Olofin and the White Caps',
     date: '17th century · Iga Idunganran built 1670',
@@ -66,6 +402,7 @@ export const CHAPTERS = [
   },
   {
     id: 3,
+    environment: 'road',
     roman: 'IV',
     title: 'A Kingdom at the Crossroads',
     date: '18th century',
@@ -88,6 +425,7 @@ export const CHAPTERS = [
   // ---------------- ACT II: THE TREATIES ----------------
   {
     id: 4,
+    environment: 'water',
     roman: 'V',
     title: 'A Consul Appointed',
     date: 'West African coast · 1849',
@@ -107,6 +445,7 @@ export const CHAPTERS = [
   },
   {
     id: 5,
+    environment: 'courtyard',
     roman: 'VI',
     title: 'Lagos Under Kosoko',
     date: 'Lagos Island · c. 1850',
@@ -127,6 +466,7 @@ export const CHAPTERS = [
   },
   {
     id: 6,
+    environment: 'forest',
     roman: 'VII',
     title: "An Exile's Bargain",
     date: 'Badagry · 1850–51',
@@ -147,6 +487,7 @@ export const CHAPTERS = [
   },
   {
     id: 7,
+    environment: 'water',
     roman: 'VIII',
     title: 'The Reduction of Lagos',
     date: '26–28 December 1851',
@@ -167,6 +508,7 @@ export const CHAPTERS = [
   },
   {
     id: 8,
+    environment: 'water',
     roman: 'IX',
     title: 'A King Falls, A King Returns',
     date: 'Late December 1851',
@@ -185,6 +527,7 @@ export const CHAPTERS = [
   },
   {
     id: 9,
+    environment: 'water',
     roman: 'X',
     title: 'The Treaty on the Penelope',
     date: '1 January 1852',
@@ -207,6 +550,7 @@ export const CHAPTERS = [
   },
   {
     id: 10,
+    environment: 'courtyard',
     roman: 'XI',
     title: 'An Uneasy Decade',
     date: '1852–1861',
@@ -227,6 +571,7 @@ export const CHAPTERS = [
   },
   {
     id: 11,
+    environment: 'water',
     roman: 'XII',
     title: 'Pressure Mounts',
     date: 'July 1861',
@@ -248,6 +593,7 @@ export const CHAPTERS = [
   },
   {
     id: 12,
+    environment: 'water',
     roman: 'XIII',
     title: 'The Cession',
     date: '6 August 1861',
@@ -270,6 +616,7 @@ export const CHAPTERS = [
   },
   {
     id: 13,
+    environment: 'courtyard',
     roman: 'XIV',
     title: 'Crown Colony',
     date: '5 March 1862',
@@ -290,6 +637,7 @@ export const CHAPTERS = [
   // ---------------- ACT III: WHAT REMAINED ----------------
   {
     id: 14,
+    environment: 'courtyard',
     roman: 'XV',
     title: 'Isale Eko After 1862',
     date: 'Lagos · 1960 to today',
@@ -310,6 +658,7 @@ export const CHAPTERS = [
   },
   {
     id: 15,
+    environment: 'water',
     roman: 'XVI',
     title: 'Why This History Matters',
     date: 'Epilogue',
